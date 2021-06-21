@@ -3,29 +3,33 @@
 <html>
 	<head>	
 		<style>
-			table {width:70%;}
-			p {color:#191970; line-height:30px;}
-			ol{color:#191970;}
-			#left{
-				float: left;
-				list-style-type: none;
-				}
-			li a{
+			table {width:70%;}	//表格寬度
+			p {color:#191970; line-height:30px;} //文字顏色與間隔
+			ol{color:#191970;}	//數字列表之文字顏色
+			li a{			
 				display: block;
 				color: white;
-				background-color:black;
+				background-color: black;
 				text-align: center;
 				padding:10px 14px;
 				text-decoration: none;
 			}
-			li a:hover:not(.active){background-color:gray;}
+			#left{			
+				float: left;
+				list-style-type: none;
+			}
+			li a:hover:not(.active){
+				background-color:gray;
+			}
+			
 		</style>
 		<title>My cv</title>
 	</head>
 	<body bgcolor="#F0F8FF">
 		<div>
-			<h1><center>Joye Wu</h1>
-      			<h4><center>國立中央大學企業管理學系雙主修資訊管理學系</h4>
+			<h1>Joye Wu</h1>
+      			<h4 id="click"></h4>
+			<button type="button" onclick="func()">See more information</button>
 			<hr>
 		</div>
 		<div>
@@ -102,6 +106,10 @@
 	  </td>
          <tr>
       </table>
-  
   </body>
+ <script>
+	function func(){
+		document.getElementById("click").innerHTML="國立中央大學企業管理學系雙主修資訊管理學系";	
+	}
+ </script>
 </html>
